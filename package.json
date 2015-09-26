@@ -1,6 +1,6 @@
 {
   "name": "linear-presets-temperature-difference",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Linear presets for temperature difference",
   "main": "src/linear-presets-temperature-difference.js",
   "scripts": {
