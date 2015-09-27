@@ -18,7 +18,8 @@ function invert(preset) {
 
 describe('temperature difference presets', function() {
   it('should convert correctly', function() {
-    (138600).should.be.exactly(convert(249480, invert(tempDiff.celsius_fahrenheit)), 'celsius_fahrenheit')
+    (138600).should.be.exactly(convert(138600, invert(tempDiff.celsius_celsius)), 'celsius_celsius')
+      .and.exactly(convert(249480, invert(tempDiff.celsius_fahrenheit)), 'celsius_fahrenheit')
       .and.exactly(convert(138600, invert(tempDiff.celsius_kelvin)), 'celsius_kelvin')
       .and.exactly(convert(249480, invert(tempDiff.celsius_rankine)), 'celsius_rankine')
       .and.exactly(convert(-207900, invert(tempDiff.celsius_delisle)), 'celsius_delisle')
@@ -26,7 +27,8 @@ describe('temperature difference presets', function() {
       .and.exactly(convert(110880, invert(tempDiff.celsius_reaumur)), 'celsius_reaumur')
       .and.exactly(convert(72765, invert(tempDiff.celsius_romer)), 'celsius_romer');
 
-    (0).should.be.exactly(convert(0, invert(tempDiff.celsius_fahrenheit)), 'celsius_fahrenheit')
+    (0).should.be.exactly(convert(0, invert(tempDiff.celsius_celsius)), 'celsius_celsius')
+      .and.exactly(convert(0, invert(tempDiff.celsius_fahrenheit)), 'celsius_fahrenheit')
       .and.exactly(convert(0, invert(tempDiff.celsius_kelvin)), 'celsius_kelvin')
       .and.exactly(convert(0, invert(tempDiff.celsius_rankine)), 'celsius_rankine')
       .and.exactly(convert(0, invert(tempDiff.celsius_delisle)), 'celsius_delisle')
